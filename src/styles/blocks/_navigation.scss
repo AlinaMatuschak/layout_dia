@@ -1,0 +1,29 @@
+@import "./../utils/vars";
+
+.navigation {
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    margin: 0 26px;
+    list-style: none;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    padding: 0 3px;
+    line-height: 36px;
+    color: $text-light;
+    font-size: 13px;
+    text-transform: uppercase;
+    @include hover(opacity, 0.8);
+
+    @media (min-width: 1900px) {
+      font-size: 15px;
+    }
+  }
+}

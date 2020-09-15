@@ -1,0 +1,47 @@
+@import "./../utils/vars";
+
+.expertise {
+  padding: $block-ver-padding $block-hor-padding;
+  color: $text-dark;
+  text-align: center;
+  background-color: #fff;
+
+  &__title {
+    margin-bottom: 60px;
+    font-size: 52px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    @media (min-width: 1900px) {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+  }
+
+  &__card {
+    width: 270px;
+    padding: 5px;
+  }
+
+  &__img {
+    width: 166px;
+    height: 166px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+  }
+
+  &__kind {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__explanation {
+    font-size: 14px;
+    color: #6C788B;
+  }
+}

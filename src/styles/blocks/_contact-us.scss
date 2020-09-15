@@ -1,0 +1,39 @@
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  padding: $block-ver-padding $block-hor-padding 50px;
+  color: $text-light;
+  background-color: $footer-color;
+  border-top-right-radius: 200px;
+
+  @media (min-width: 1900px) {
+    padding: $block-ver-padding 20vw 50px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+    font-size: 32px;
+  }
+
+  &__hint {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.5;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 48px;
+    color: $text-light;
+    font-size: 24px;
+    @include hover(opacity, 0.7);
+  }
+
+  &__network {
+    margin-right: 35px;
+    @include hover(opacity, 0.7);
+  }
+}

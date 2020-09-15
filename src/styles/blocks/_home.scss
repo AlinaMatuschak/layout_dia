@@ -1,0 +1,45 @@
+@import "./../utils/vars";
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: $text-light;
+
+  border-bottom-left-radius: 200px;
+  background-color: $header-color;
+
+  &__inf {
+    width: 385px;
+    margin-left: 225px;
+
+    @media (min-width: 1900px) {
+      width: 743px;
+      margin-left: 15vw;
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+    margin: 0 0 32px;
+
+    @media (min-width: 1900px) {
+      font-size: 82px;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 83px;
+
+    @media (min-width: 1900px) {
+      font-size: 22px;
+    }
+  }
+
+  &__button {
+    @include button;
+  }
+}
