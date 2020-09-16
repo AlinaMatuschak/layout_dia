@@ -24,7 +24,7 @@
   }
 }
 
-@mixin installColorForServiceCard($color, $colorBG) {
+@mixin colorServiceCard($color, $colorBG) {
   .service__num {
     color: #{$color};
     background-color: #{$colorBG};

@@ -18,4 +18,8 @@
     font-size: 24px;
     font-weight: 600;
   }
+
+  @media (max-width: 799px) {
+    padding: $block-ver-padding 20px;
+  }
 }

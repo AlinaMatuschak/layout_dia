@@ -1,9 +1,23 @@
 @import "./../utils/vars";
 
 .navigation {
+  @media (max-width: 1269px) {
+    &--togger {
+      display: none;
+    }
+  }
+
   &__list {
     display: flex;
     flex-wrap: nowrap;
+
+    @media (max-width: 1269px) {
+      &--togger {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+      }
+    }
   }
 
   &__item {
@@ -24,6 +38,12 @@
 
     @media (min-width: 1900px) {
       font-size: 15px;
+    }
+
+    @media (max-width: 1269px) {
+      &--togger {
+        font-size: 6vh;
+      }
     }
   }
 }

@@ -2,18 +2,24 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin-bottom: 900px;
+  height: 735px;
   padding: $block-ver-padding $block-hor-padding 0;
   color: $text-normal-color;
-
+  
   @media (min-width: 1900px) {
-    padding: $block-ver-padding 20vw 0;
+    max-width: 1600px;
+    padding: $block-ver-padding 0 0;
+  }
+
+  @media (max-width: 1480px) {
+    padding: $block-ver-padding 126px 0;
   }
 
   &__article {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 20px;
     max-width: 362px;
     max-height: 470px;
   }
@@ -57,19 +63,19 @@
     z-index: 1;
 
     &--blue {
-      @include installColorForServiceCard($cards-first-color,  rgba(86, 204, 242, 0.1));
+      @include colorServiceCard($cards-first-color,  rgba(86, 204, 242, 0.1));
     }
 
     &--yellow {
-      @include installColorForServiceCard($cards-second-color,  rgba(252, 201, 29, 0.1));
+      @include colorServiceCard($cards-second-color,  rgba(252, 201, 29, 0.1));
     }
 
     &--green {
-      @include installColorForServiceCard($cards-third-color, rgba(21, 216, 80, 0.1));
+      @include colorServiceCard($cards-third-color, rgba(21, 216, 80, 0.1));
     }
 
     &--red {
-      @include installColorForServiceCard($cards-fourth-color, rgba(243, 99, 99, 0.1));
+      @include colorServiceCard($cards-fourth-color, rgba(243, 99, 99, 0.1));
     }
 
     &--last {
@@ -115,6 +121,47 @@
       width: 90px;
       font-size: 15px;
       color: $text-dark;
+    }
+  }
+
+  @media (max-width: 1269px) {
+    flex-direction: column;
+    height: 860px;
+    align-items: center;
+
+    &__article {
+      max-width: 563px;
+    }
+
+    &__card {
+      &:first-child {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 819px) {
+    height: 900px;
+  }
+
+  @media (max-width: 621px) {
+    padding: $block-ver-padding 20px 0;
+    height: auto;
+
+    &__article {
+      max-width: 264px;
+    }
+
+    &__cards {
+      align-items: center;
+      height: auto;
+      width: auto;
+    }
+
+    &__card {
+      &--last {
+        order: 0;
+      }
     }
   }
 }

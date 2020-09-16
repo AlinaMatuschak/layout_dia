@@ -28,4 +28,10 @@
     margin: 40px 0;
     @include button;
   }
+
+  @media (max-width: 595px) {
+    &__input {
+      width: 280px;
+    }
+  }
 }

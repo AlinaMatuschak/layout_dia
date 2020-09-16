@@ -1,5 +1,7 @@
 .main {
-  &__introducing {
+  &__introducing,
+  &__service,
+  &__comments {
     margin: 0 auto;
   }
 }

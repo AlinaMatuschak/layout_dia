@@ -5,11 +5,23 @@
   padding: 0 200px 0 $block-hor-padding;
   background-color: $footer-color;
 
+  &__link-logo {
+    @include hover(opacity, 0.8);
+  }
+
   @media (min-width: 1900px) {
     padding: 0 13vw 0 15vw;
   }
 
-  &__link-logo {
-    @include hover(opacity, 0.8);
+  @media (max-width: 1480px) {
+    padding: 0 8vw 0 10vw;
+  }
+
+  @media (max-width: 1269px) {
+    justify-content: center;
+
+    &__nav {
+      display: none;
+    }
   }
 }

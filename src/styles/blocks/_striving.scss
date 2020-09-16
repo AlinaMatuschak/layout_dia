@@ -1,16 +1,13 @@
 .striving {
-  position: absolute;
-  right: 0;
+  display: flex;
+  justify-content: space-between;
   width: 92vw;
-  padding: 204px 0 156px 204px;
+  height: 976px;
+  margin-left: auto;
+  padding: 204px 0 0 204px;
   color: $text-light;
   background-color: $main-color;
   border-radius: 200px 0 0 200px;
-  transform: translateY(-1015px);
-
-  &__article {
-    max-width: 362px;
-  }
 
   &__hint {
     display: block;
@@ -26,6 +23,11 @@
     line-height: 1.5;
   }
 
+  &__article {
+    padding-right: 20px;
+    max-width: 362px;
+  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -37,35 +39,93 @@
     height: 64px;
     margin-right: 34px;
     border-radius: 50%;
-    background-color: #fff;
-    background-position: center;
-
-    &--first {
-      background: url("/images/features/features-item-icon-1.svg");
-    }
-
-    &--second {
-      background: url("/images/features/features-item-icon-2.svg");
-    }
-
-    &--third {
-      background: url("/images/features/features-item-icon-3.svg");
-    }
   }
 
   &__text {
-    max-width: 264px;
     font-size: 15px;
     line-height: 1.5;
   }
 
   &__img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
     width: 43vw;
     height: 730px;
+    margin-top: auto;
     border-top-left-radius: 200px;
     background: url("/images/features/features-bg.jpg") center no-repeat;
+  }
+
+  @media (min-width: 1780px) {
+    &__article {
+      max-width: 730px;
+    }
+  }
+
+  @media (max-width: 1269px) {
+    flex-direction: column;
+    padding: 100px 0 0;
+
+    &__article {
+      max-width: 1035px;
+      margin-left: 100px;
+    }
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+
+    &__img {
+      width: 100%;
+      height: 550px;
+      border-radius: 0 0 0 200px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    &__article {
+      margin-left: 50px;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      flex-direction: row;
+      padding: 0;
+    }
+
+    &__text {
+      max-width: 464px;
+    }
+  }
+
+  @media (max-width: 569px) {
+    &__icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 18px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+    &__item {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (max-width: 382px) {
+    &__img {
+      display: none;
+    }
   }
 }

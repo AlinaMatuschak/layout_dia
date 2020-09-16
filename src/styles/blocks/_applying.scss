@@ -1,6 +1,6 @@
 .applying {
   position: relative;
-  padding: 199px 0;
+  padding: 199px 20px;
   text-align: center;
   line-height: 1.5;
   background-color: #fff;
@@ -107,27 +107,46 @@
 
     &--yellow {
       border-color: rgba(252, 195, 4, 0.5);
-      @include decorativeGradientOnHover(linear-gradient(90deg, #e4a838, #f1dd6a));
     }
 
     &--blue {
       border-color: rgba(86, 204, 242, 0.5);
-      @include decorativeGradientOnHover(linear-gradient(90deg, #cfecd0, #7195da));
     }
 
     &--violet {
       border-color: rgba(188, 4, 252, 0.5);
-      @include decorativeGradientOnHover(linear-gradient(90deg, #ee5c87, #f1a4b5, #d587b3));
     }
 
     &--pink {
       border-color: rgba(242, 86, 86, 0.5);
-      @include decorativeGradientOnHover(linear-gradient(90deg, #f598a8, #f6edb2));
     }
 
     &--green {
       border-color: rgba(3, 213, 66, 0.5);
-      @include decorativeGradientOnHover(linear-gradient(90deg, #bbf387, #4bce47));
+    }
+  }
+
+  @media (min-width: 1315px) {
+    &__decor {
+      &--yellow {
+        @include decorativeGradientOnHover($gradient-yellow);
+      }
+  
+      &--blue {
+        @include decorativeGradientOnHover($gradient-blue);
+      }
+  
+      &--violet {
+        @include decorativeGradientOnHover($gradient-violet);
+      }
+  
+      &--pink {
+        @include decorativeGradientOnHover($gradient-pink);
+      }
+  
+      &--green {
+        @include decorativeGradientOnHover($gradient-green);
+      }
     }
   }
 }
