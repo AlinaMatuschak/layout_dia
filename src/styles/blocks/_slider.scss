@@ -28,7 +28,7 @@
     border-width: 0;
     border-radius: 50%;
     cursor: pointer;
-    @include hover(opacity, 0.8)
+    @include hover(opacity, 0.8);
   }
 
   &__inf {
