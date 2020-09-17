@@ -1,27 +1,13 @@
 .service {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  height: 735px;
-  padding: $block-ver-padding $block-hor-padding 0;
+  justify-content: center;
+  padding: 0 60px;
   color: $text-normal-color;
-  
-  @media (min-width: 1900px) {
-    max-width: 1600px;
-    padding: $block-ver-padding 0 0;
-  }
-
-  @media (max-width: 1480px) {
-    padding: $block-ver-padding 126px 0;
-  }
 
   &__article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 20px;
+    margin: auto 226px auto 0;
     max-width: 362px;
-    max-height: 470px;
   }
 
   &__hint {
@@ -51,6 +37,7 @@
     flex-wrap: wrap;
     height: $service-cards-height;
     width: $service-cards-width;
+    transform: translateY(120px);
   }
 
   &__card {
@@ -124,13 +111,25 @@
     }
   }
 
+  @media (min-width: 1900px) {
+    &__article {
+      margin-right: 300px;
+      max-width: 1500px;
+    }
+  }
+
   @media (max-width: 1269px) {
-    flex-direction: column;
-    height: 860px;
-    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 148px;
 
     &__article {
+      margin: 0;
       max-width: 563px;
+    }
+
+    &__cards {
+      height: 590px;
+      transform: translateY(68px);
     }
 
     &__card {
@@ -140,18 +139,7 @@
     }
   }
 
-  @media (max-width: 819px) {
-    height: 900px;
-  }
-
-  @media (max-width: 621px) {
-    padding: $block-ver-padding 20px 0;
-    height: auto;
-
-    &__article {
-      max-width: 264px;
-    }
-
+  @media (max-width: 712px) {
     &__cards {
       align-items: center;
       height: auto;

@@ -7,8 +7,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $c-gray;
+}
+
+p {
+  margin: 0;
 }
 
 a {

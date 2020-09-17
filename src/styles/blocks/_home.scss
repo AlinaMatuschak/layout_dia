@@ -4,47 +4,43 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   color: $text-light;
-
   border-bottom-left-radius: 200px;
   background-color: $header-color;
 
   &__inf {
     width: 385px;
-    margin-left: 225px;
-
-    @media (min-width: 1900px) {
-      width: 743px;
-      margin-left: 15vw;
-    }
-
-    @media (max-width: 1480px) {
-      margin-left: 10vw;
-    }
+    margin: 0 20px 0 225px;
   }
 
   &__title {
     font-size: 64px;
     margin: 0 0 32px;
-
-    @media (min-width: 1900px) {
-      font-size: 82px;
-    }
   }
 
   &__text {
     display: block;
     font-size: 18px;
     margin-bottom: 83px;
-
-    @media (min-width: 1900px) {
-      font-size: 22px;
-    }
   }
 
   &__button {
     @include button;
+  }
+
+  @media (min-width: 1900px) {
+    &__inf {
+      width: 743px;
+      margin-left: 20vw;
+    }
+
+    &__title {
+      font-size: 82px;
+    }
+
+    &__text {
+      font-size: 22px;
+    }
   }
 
   @media (max-width: 1269px) {
@@ -54,7 +50,7 @@
 
     &__inf {
       width: 785px;
-      margin-left: 0;
+      margin: 0;
       text-align: center;
     }
 

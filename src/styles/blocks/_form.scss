@@ -1,6 +1,5 @@
 .form {
-  display: flex;
-  flex-direction: column;
+  max-width: 470px;
 
   ::placeholder {
     color: $text-light;
@@ -30,6 +29,8 @@
   }
 
   @media (max-width: 595px) {
+    width: 280px;
+
     &__input {
       width: 280px;
     }

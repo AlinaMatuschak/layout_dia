@@ -17,6 +17,7 @@
     margin: 0 auto 64px;
     color: $text-normal-color;
     font-size: 24px;
+    @extend %textSemiBold;
   }
 
   &__button {

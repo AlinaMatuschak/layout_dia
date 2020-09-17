@@ -1,23 +1,17 @@
-@import "./../utils/vars";
-
 .header {
   position: relative;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
   height: $header-height;
-  padding: 0 $block-hor-padding;
   letter-spacing: 3px;
   background-color: $header-color;
 
-  @media (min-width: 1900px) {
-    padding: 0 15vw;
-    height: $hd-header-height;
-  }
-
-  @media (max-width: 1480px) {
-    padding: 0 10vw;
+  &__wrp {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70vw;
+    height: inherit;
+    margin: 0 auto;
   }
 
   &__label {
@@ -40,22 +34,6 @@
 
   &__input {
     display: none;
-
-    &:checked ~ .header__nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      display: block;
-      background-color: $header-color;
-      z-index: 1;
-      animation: appear 1s linear forwards;
-    }
-
-    &:checked ~ .header__label::after {
-      background: url("/images/cross.svg") center no-repeat;
-    }
   }
 
   &__link-logo {
@@ -84,20 +62,17 @@
       height: 2px;
       background-color: $main-color;
     }
+  }
 
-    @media (min-width: 1900px) {
+  @media (min-width: 1900px) {
+    height: $hd-header-height;
+
+    &__link {
       font-size: 15px;
-    }
-
-    @media (max-width: 1269px) {
-      font-size: 18px;
-      height: 40px;
     }
   }
 
   @media (max-width: 1269px) {
-    height: 50px;
-
     &__label {
       display: block;
     }
@@ -105,10 +80,34 @@
     &__input {
       display: block;
       width: 0;
+
+      &:checked ~ .header__nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        background: url("/images/menu-background.jpg") center no-repeat;
+        background-size: cover;
+        z-index: 1;
+        animation: appear 1s linear forwards;
+      }
+  
+      &:checked ~ .header__link {
+        opacity: 1;
+      }
+  
+      &:checked ~ .header__label::after {
+        right: 0;
+        left: 10vw;
+        background: url("/images/cross.svg") center no-repeat;
+      }
     }
 
     &__link {
-      display: none;
+      opacity: 0;
+      transition: opacity 0.5s;
     }
   }
 }

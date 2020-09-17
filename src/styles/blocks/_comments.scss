@@ -1,14 +1,6 @@
 .comments {
-  padding: $block-ver-padding $block-hor-padding;
-
-  @media (min-width: 1900px) {
-    max-width: 1600px;
-    padding: $block-ver-padding 0;
-  }
-
-  @media (max-width: 1480px) {
-    padding: $block-ver-padding 126px;
-  }
+  padding: $block-ver-padding 20px;
+  max-width: 1200px;
 
   &__hint {
     margin-bottom: 16px;
@@ -106,6 +98,7 @@
   &__text {
     margin-bottom: 16px;
     color: $text-normal-color;
+    @extend %textSemiBold;
   }
 
   &__name {
@@ -119,9 +112,12 @@
     text-transform: uppercase;
   }
 
+  @media (min-width: 1900px) {
+    max-width: 1600px;
+  }
+
   @media (max-width: 1269px) {
     text-align: center;
-    padding: $block-ver-padding 20px 100px;
 
     &__title {
       max-width: 300px;
