@@ -1,11 +1,12 @@
 .footer {
   height: $footer-height;
+  padding: 0 220px;
   background-color: $footer-color;
 
   &__wrp {
     display: flex;
     justify-content: space-between;
-    max-width: 70vw;
+    max-width: 1400px;
     margin: 0 auto;
   }
 
@@ -14,6 +15,8 @@
   }
 
   @media (max-width: 1269px) {
+    padding: 0 10vw;
+
     &__wrp {
       justify-content: center;
     }

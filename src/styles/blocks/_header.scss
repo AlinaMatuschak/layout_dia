@@ -1,6 +1,7 @@
 .header {
   position: relative;
   height: $header-height;
+  padding: 0 220px;
   letter-spacing: 3px;
   background-color: $header-color;
 
@@ -9,7 +10,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 70vw;
+    max-width: 1400px;
     height: inherit;
     margin: 0 auto;
   }
@@ -73,6 +74,8 @@
   }
 
   @media (max-width: 1269px) {
+    padding: 0 10vw;
+
     &__label {
       display: block;
     }
@@ -94,20 +97,13 @@
         animation: appear 1s linear forwards;
       }
   
-      &:checked ~ .header__link {
-        opacity: 1;
-      }
-  
       &:checked ~ .header__label::after {
-        right: 0;
-        left: 10vw;
         background: url("/images/cross.svg") center no-repeat;
       }
     }
 
     &__link {
-      opacity: 0;
-      transition: opacity 0.5s;
+      display: none;
     }
   }
 }
