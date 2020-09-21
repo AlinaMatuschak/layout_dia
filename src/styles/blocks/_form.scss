@@ -1,0 +1,42 @@
+.form {
+  max-width: 470px;
+
+  ::placeholder {
+    color: $text-light;
+    font-size: 15px;
+    opacity: 0.7;
+  }
+
+  :focus {
+    padding-bottom: 16px;
+    border-bottom-width: 2px;
+    opacity: 1;
+  }
+
+  &__input {
+    margin-bottom: 40px;
+    width: 460px;
+    padding: 17px 0;
+    color: $text-light;
+    font-size: 15px;
+    border-width: 0;
+    border-bottom-width: 1px;
+    background-color: $footer-color;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.5s;
+  }
+
+  &__submit {
+    margin: 40px 0;
+    @include button;
+  }
+
+  @media (max-width: 595px) {
+    width: 280px;
+
+    &__input {
+      width: 280px;
+    }
+  }
+}
