@@ -7,12 +7,11 @@ form.addEventListener('submit', event => {
   event.preventDefault();
 });
 
-const localHostname = window.location.hostname;
 const buttonsLearnMore = document.querySelectorAll('.learn-more');
 
 buttonsLearnMore.forEach(button => {
   button.addEventListener('click', event => {
-    document.location.href = localHostname + '#about-us';
+    document.location.href = '#about-us';
     event.preventDefault();
   });
 });
@@ -20,6 +19,6 @@ buttonsLearnMore.forEach(button => {
 const buttonApply = document.querySelector('.button-apply');
 
 buttonApply.addEventListener('click', event => {
-  document.location.href = localHostname + '#contact-us';
+  document.location.href = '#contact-us';
   event.preventDefault();
 });
